@@ -45,12 +45,61 @@ class _BusseatsState extends State<BusBooking> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                               seats[i].column1!.position ==1 ? Container(color: Colors.red,height: 30,width: 30,) : Container(color: Colors.white,height: 30,width: 30,),
-                               seats[i].column2!.position ==1 ? Container(color: Colors.red,height: 30,width: 30,) : Container(color: Colors.white,height: 30,width: 30,),
-                               seats[i].column3!.position ==1 ? Container(color: Colors.red,height: 30,width: 30,) : Container(color: Colors.white,height: 30,width: 30,),
-                               seats[i].column4!.position ==1 ? Container(color: Colors.red,height: 30,width: 30,) : Container(color: Colors.white,height: 30,width: 30,),
-                               seats[i].column5!.position ==1 ? Container(color: Colors.red,height: 30,width: 30,) : Container(color: Colors.white,height: 30,width: 30,),
-                               seats[i].column6!.position ==1 ? Container(color: Colors.red,height: 30,width: 30,) : Container(color: Colors.white,height: 30,width: 30,),
+                               seats[i].column1!.position ==1 ? InkWell(child: Container(color: seats[i].column1!.booked == true ? Colors.red : Colors.blue,height: 30,width: 30,),onTap: (){
+                                 setState(() {
+                                   if(seats[i].column1!.booked== true ){
+                                     seats[i].column1!.booked = false;
+                                   }else{
+                                     seats[i].column1!.booked = true;
+                                   }
+                                 });
+
+                               },) : Container(color: Colors.white,height: 30,width: 30,),
+                               seats[i].column2!.position ==1 ? InkWell(child: Container(color: seats[i].column2!.booked == true ? Colors.red : Colors.blue,height: 30,width: 30,),onTap: (){
+                                 setState(() {
+                                   if(seats[i].column2!.booked== true ){
+                                     seats[i].column2!.booked = false;
+                                   }else{
+                                     seats[i].column2!.booked = true;
+                                   }
+                                 });
+                               },) : Container(color: Colors.white,height: 30,width: 30,),
+                               seats[i].column3!.position ==1 ? InkWell(child: Container(color: seats[i].column3!.booked == true ? Colors.red : Colors.blue,height: 30,width: 30,),onTap: (){
+                                 setState(() {
+                                   if(seats[i].column3!.booked== true ){
+                                     seats[i].column3!.booked = false;
+                                   }else{
+                                     seats[i].column3!.booked = true;
+                                   }
+                                 });
+                               },) : Container(color: Colors.white,height: 30,width: 30,),
+                               seats[i].column4!.position ==1 ? InkWell(child: Container(color: seats[i].column4!.booked == true ? Colors.red : Colors.blue,height: 30,width: 30,),onTap: (){
+                                 setState(() {
+                                   if(seats[i].column4!.booked== true ){
+                                     seats[i].column4!.booked = false;
+                                   }else{
+                                     seats[i].column4!.booked = true;
+                                   }
+                                 });
+                               },) : Container(color: Colors.white,height: 30,width: 30,),
+                               seats[i].column5!.position ==1 ? InkWell(child: Container(color: seats[i].column5!.booked == true ? Colors.red : Colors.blue,height: 30,width: 30,),onTap: (){
+                                 setState(() {
+                                   if(seats[i].column5!.booked== true ){
+                                     seats[i].column5!.booked = false;
+                                   }else{
+                                     seats[i].column5!.booked = true;
+                                   }
+                                 });
+                               },) : Container(color: Colors.white,height: 30,width: 30,),
+                               seats[i].column6!.position ==1 ? InkWell(child: Container(color: seats[i].column6!.booked == true ? Colors.red : Colors.blue,height: 30,width: 30,),onTap: (){
+                                 setState(() {
+                                   if(seats[i].column6!.booked== true ){
+                                     seats[i].column6!.booked = false;
+                                   }else{
+                                     seats[i].column6!.booked = true;
+                                   }
+                                 });
+                               },) : Container(color: Colors.white,height: 30,width: 30,),
                             ],
                           )
                         );
